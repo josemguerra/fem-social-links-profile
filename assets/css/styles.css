@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --Green: rgb(197, 248, 42);
+  --White: rgb(255, 255, 255);
+  --Grey-600: rgb(140, 140, 140);
+  --Grey-700: rgb(51, 51, 51);
+  --Grey-800: rgb(31, 31, 31);
+  --Grey-900: rgb(20, 20, 20);
+}
+
+/*
+Reset default styles.
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.3rem;
+  background-color: var(--Grey-900);
+  color: var(--White);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.profile-card {
+  background-color: var(--Grey-800);
+  border-radius: 12px;
+  margin: 24px;
+  padding: 40px;
+  max-width: 384px;
+  height: 611px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 24px;
+}
+
+.profile__details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.profile__image {
+  max-width: 100%;
+  height: auto;
+  width: 88px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.profile__header {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.profile__address {
+  padding-bottom: 24px;
+  color: var(--Green);
+}
+
+.profile__description {
+  color: var(--Grey-600);
+}
+
+.nav__list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.nav__item {
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+}
+
+.socialnav__link {
+  text-decoration: none;
+  display: inline-block;
+  width: 304px;
+  background-color: var(--Grey-700);
+  color: var(--White);
+  font-weight: 600;
+  border-radius: 6px;
+  transition: background-color 0.5s ease;
+}
+
+.socialnav__link:hover {
+  background-color: var(--Green);
+  color: var(--Grey-900);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 10px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: var(--Green);
+}
+
+@media (max-width: 440px) {
+  .profile-card {
+    margin: 10px;
+    padding: 20px;
+  }
+}
